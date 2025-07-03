@@ -1,0 +1,18 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+numReplicas = 1
+sleepApplication = false
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[env]
+APP_USER = "Guest"
+APP_PASSWORD = "Guest"
+APP_AUTH_TYPE = "token"
+SERVER_URL = "https://www.squidify.org"
+HIDE_SERVER = "true"
+SERVER_TYPE = "navidrome"
+PORT = { name = "PORT" }
